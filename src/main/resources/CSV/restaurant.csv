@@ -1,0 +1,6 @@
+restaurant_ID,restaurant_name,city,address,telephone,establishment,price_level,cuisine,photo_path
+r1,Storchen La Cicogna,Freiburg in Breisgau,Schwabentorplatz 7,4976134970,com.blackbytes.springbootexample.restaurant,medium,italian,photos/storchen.png
+r2,Basho-An,Freiburg in Breisgau,Merianstr. 10,497612853405,com.blackbytes.springbootexample.restaurant,very_high,sushi,photos/basho.png
+r3,Enoteca,Freiburg in Breisgau,Gerberau 21,497613899130,com.blackbytes.springbootexample.restaurant,high,italian,photos/enoteca.png
+r4,Mai Garden,Freiburg in Breisgau,Habsburgerstr. 105,4976136302433,com.blackbytes.springbootexample.restaurant,medium,sushi,photos/maiGarden.png
+r5,Stefans Kasekuchen,Freiburg in Breisgau,Wiedenhut 2b,4976649629712,Coffe & dessert,low,desserts,photos/stefans.png

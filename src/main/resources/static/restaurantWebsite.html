@@ -1,0 +1,210 @@
+<html lang="en"><head><style>
+    h1 {
+        color: #734d26;
+        font-size: 50px;
+        text-align: center;
+        margin-top:80px;
+        margin-bottom: 100px;
+    }
+
+
+    input[type=number]{
+        width: 40%;
+        }
+
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        font-size: 16px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=button] {
+        width: 100%;
+        background-color: #996633;
+        color: white;
+        font-size: 16px;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=button]:hover {
+        background-color: #c68c53;
+    }
+
+    .form {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        position: relative;
+        left: 0px;
+        width: 600px;
+
+    }
+
+    h2 {
+        color: #623c1e;
+        font-size: 30px;
+    }
+
+    h3{
+    margin:0px;
+        color: #623c1e;
+        font-size: 20px;
+        line-height: 37px;
+
+    }
+
+
+
+    .restaurantGrid {
+        background-color: #f9f2ec;
+        padding: 20px;
+        padding-bottom:20px;
+        height: 200px;
+        display:flex;
+        flex-direction:row;
+       }
+
+    .restaurantGrid:hover {
+        background-color: #ebd9c6;
+    }
+
+    .restaurant-logo {
+        flex-grow:0;
+        flex-shrink:0;
+    }
+
+ .restaurant-content {
+    display:flex;
+    flex-direction:column;
+    padding-left:50px;
+ }
+
+ .restaurant-content h2 {
+     flex-grow:0;
+      flex-shrink:0;
+      max-height: 10px;
+      margin-top: 5px;
+      marign-bottom: 35px;
+ }
+
+.restaurant-details {
+    flex-grow:1;
+    flex-shrink:1;
+    display:flex;
+    flex-direction:row;
+}
+    .restaurant-content, .restaurant-address, .restaurant-tables {
+        flex-grow:1;
+        flex-shrink:1;
+    }
+    .restaurant-address {
+    max-width: 500px;
+    }
+    .logo-box {
+        float:left;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 3px;
+    }
+
+    .restaurant-title {
+        float:left;
+    }
+
+        .table-box {
+        float:left;
+        position: relative;
+        left: 50px;
+        margin-top: 30px;
+        height= 100px;
+    }
+
+    .tables-list {
+        width:300px;
+    }
+
+    .table-line {
+        width:50%;
+        float:left;
+    }
+
+    .table-line img {
+        width: 35px;
+        height: 35px;
+        margin-right:24px;
+    }
+
+    .table-line > * {
+        display:inline-block;
+        vertical-align:middle;
+
+    }
+
+</style>
+
+    <meta charset="UTF-8">
+    <title>Book your table</title>
+</head>
+<body>
+<h1> BOOK YOUR TABLE</h1>
+
+<h2 style="margin-left: 15px;">Search your restaurant:</h2>
+
+<div class="form">
+    <form>
+        <label for="cuisine">Cuisine:</label>
+        <select id="cuisine" name="cuisine">
+            <option value="all">all</option>
+        </select>
+
+
+        <label for="nOfSeats">Number of seats:</label>
+        <input type="number" min="1" max="6" id="nOfSeats" name="numberOfSeats" placeholder="Enter the number of seats">
+
+        <input id="searchButton" type="button" value="Search" onclick= "processFormData();">
+    </form>
+</div>
+
+<div id ="resultsField">
+
+</div>
+
+<template id="restaurantGridTemplate">
+    <div class="restaurantGrid">
+        <div class ="restaurant-logo">
+            <img class="logo" src="" alt="restaurant logo" height="200" width="200">
+        </div>
+        <div class="restaurant-content">
+            <h2 class="restaurant-name">Gasthaus zum Storchen</h2>
+            <div class="restaurant-details">
+                <div class="restaurant-address">
+                </div>
+                <div class = "restaurant-tables">
+                    <h3 > AVAILABLE TABLES: </h3>
+                    <div class="tables-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</template>
+<template id="tableTemplate">
+    <div class="table-line">
+        <img src="photos/table.svg">
+    </div>
+</template>
+<script src="/restaurant.js"></script>
+
+</body></html>
