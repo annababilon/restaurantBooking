@@ -34,7 +34,7 @@ public class HelloWorldController {
 
     @RequestMapping("/tables")
     public ArrayList<RestaurantTableTO> listOfTables(@RequestParam(value = "numberOfSeats") int numberOfSeats, @RequestParam(value = "cuisine") String cuisine) throws IOException {
-
+        int blabla = 1;
         return restaurantQuery.findRestaurantBy(numberOfSeats,cuisine);
     }
 
